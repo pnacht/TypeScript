@@ -21,13 +21,13 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
     - run: |
         npm --version
         # corepack enable npm
         npm install -g $(jq -r '.packageManager' < package.json)
         npm --version
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       with:
         fetch-depth: 5
     - run: |
